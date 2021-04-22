@@ -2,7 +2,7 @@
   "name": "mockup_improved_matching",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/42CodeTogether/openstudio-front-mock-app/",
+  "homepage": "https://42CodeTogether.github.io/openstudio-front-mock-app/",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
