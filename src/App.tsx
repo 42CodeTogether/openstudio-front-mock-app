@@ -1,25 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navigation from "./components/Header";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Box, makeStyles } from "@material-ui/core";
+import IndexPage from "./pages/IndexPage";
+import DashBoardPage from "./pages/DashBoardPage";
+import SubjectPage from "./pages/SubjectPage";
+import TimeTablePage from "./pages/TimeTablePage";
+
+const useStyles = makeStyles((theme) => ({
+  container: {
+    padding: "24px"
+  }
+}))
 
 function App() {
+  const classes = useStyles();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box className="App" component="div">
+      <Router>
+        <Navigation />
+        <Box className={classes.container}>
+          <Switch>
+            <Route exact path={"/"} component={IndexPage}></Route>
+            <Route exact path={"/dash-board"} component={DashBoardPage}></Route>
+            <Route exact path={"/subject"} component={SubjectPage}></Route>
+            <Route exact path={"/time-table"} component={TimeTablePage}></Route>
+          </Switch>
+        </Box>
+      </Router>
+    </Box>
   );
 }
 
