@@ -24,7 +24,7 @@ const Log = ({ subjectName, members, date }: propTypes) => {
     <Card>
       <CardHeader title={subjectName} />
       <CardContent>
-        <Box>매칭 멤버 : {members}</Box>
+        <Box>매칭 멤버 : {members?.map((name)=> `${name} `)}</Box>
         <Box>매칭 날짜 : {date}</Box>
       </CardContent>
     </Card>

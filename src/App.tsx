@@ -1,6 +1,6 @@
 import React from "react";
 import Navigation from "./components/Header";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { Box, makeStyles } from "@material-ui/core";
 import IndexPage from "./pages/IndexPage";
 import DashBoardPage from "./pages/DashBoardPage";

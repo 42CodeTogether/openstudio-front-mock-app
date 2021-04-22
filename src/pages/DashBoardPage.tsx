@@ -26,48 +26,56 @@ const DashBoardPage = () => {
           <Log
             subjectName={"libft"}
             members={["jayi", "jaeskim", "seungyel"]}
+			date={new Date().toLocaleString()}
           />
         </Grid>
 		<Grid item xs={4}>
           <Log
             subjectName={"libft"}
             members={["jayi", "jaeskim", "seungyel"]}
+			date={new Date().toLocaleString()}
           />
         </Grid>
 		<Grid item xs={4}>
           <Log
             subjectName={"libft"}
             members={["jayi", "jaeskim", "seungyel"]}
+			date={new Date().toLocaleString()}
           />
         </Grid>
 		<Grid item xs={4}>
           <Log
             subjectName={"libft"}
             members={["jayi", "jaeskim", "seungyel"]}
+			date={new Date().toLocaleString()}
           />
         </Grid>
 		<Grid item xs={4}>
           <Log
             subjectName={"libft"}
             members={["jayi", "jaeskim", "seungyel"]}
+			date={new Date().toLocaleString()}
           />
         </Grid>
 		<Grid item xs={4}>
           <Log
             subjectName={"libft"}
             members={["jayi", "jaeskim", "seungyel"]}
+			date={new Date().toLocaleString()}
           />
         </Grid>
 		<Grid item xs={4}>
           <Log
             subjectName={"libft"}
             members={["jayi", "jaeskim", "seungyel"]}
+			date={new Date().toLocaleString()}
           />
         </Grid>
 		<Grid item xs={4}>
           <Log
             subjectName={"libft"}
             members={["jayi", "jaeskim", "seungyel"]}
+			date={new Date().toLocaleString()}
           />
         </Grid>
       </Grid>
