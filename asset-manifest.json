@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/42CodeTogether/openstudio-front-mock-app/static/css/main.7f5c6da4.chunk.css",
-    "main.js": "/42CodeTogether/openstudio-front-mock-app/static/js/main.1594c39d.chunk.js",
-    "main.js.map": "/42CodeTogether/openstudio-front-mock-app/static/js/main.1594c39d.chunk.js.map",
-    "runtime-main.js": "/42CodeTogether/openstudio-front-mock-app/static/js/runtime-main.d3ec1cc9.js",
-    "runtime-main.js.map": "/42CodeTogether/openstudio-front-mock-app/static/js/runtime-main.d3ec1cc9.js.map",
-    "static/js/2.27623297.chunk.js": "/42CodeTogether/openstudio-front-mock-app/static/js/2.27623297.chunk.js",
-    "static/js/2.27623297.chunk.js.map": "/42CodeTogether/openstudio-front-mock-app/static/js/2.27623297.chunk.js.map",
-    "index.html": "/42CodeTogether/openstudio-front-mock-app/index.html",
-    "static/css/main.7f5c6da4.chunk.css.map": "/42CodeTogether/openstudio-front-mock-app/static/css/main.7f5c6da4.chunk.css.map",
-    "static/js/2.27623297.chunk.js.LICENSE.txt": "/42CodeTogether/openstudio-front-mock-app/static/js/2.27623297.chunk.js.LICENSE.txt"
+    "main.css": "/openstudio-front-mock-app/static/css/main.7f5c6da4.chunk.css",
+    "main.js": "/openstudio-front-mock-app/static/js/main.1594c39d.chunk.js",
+    "main.js.map": "/openstudio-front-mock-app/static/js/main.1594c39d.chunk.js.map",
+    "runtime-main.js": "/openstudio-front-mock-app/static/js/runtime-main.61f241e4.js",
+    "runtime-main.js.map": "/openstudio-front-mock-app/static/js/runtime-main.61f241e4.js.map",
+    "static/js/2.27623297.chunk.js": "/openstudio-front-mock-app/static/js/2.27623297.chunk.js",
+    "static/js/2.27623297.chunk.js.map": "/openstudio-front-mock-app/static/js/2.27623297.chunk.js.map",
+    "index.html": "/openstudio-front-mock-app/index.html",
+    "static/css/main.7f5c6da4.chunk.css.map": "/openstudio-front-mock-app/static/css/main.7f5c6da4.chunk.css.map",
+    "static/js/2.27623297.chunk.js.LICENSE.txt": "/openstudio-front-mock-app/static/js/2.27623297.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d3ec1cc9.js",
+    "static/js/runtime-main.61f241e4.js",
     "static/js/2.27623297.chunk.js",
     "static/css/main.7f5c6da4.chunk.css",
     "static/js/main.1594c39d.chunk.js"
