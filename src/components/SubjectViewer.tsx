@@ -223,6 +223,7 @@ const SubjectDetail = () => {
         <DialogTitle id="form-dialog-title">팀원 모집</DialogTitle>
         <DialogContent>
           <DialogContentText>
+			(해당 부분은 논의가 필요한 사항입니다.)<br/>
             팀원 모집을 위한 글을 작성 후 신청해주세요.
           </DialogContentText>
           <TextField
