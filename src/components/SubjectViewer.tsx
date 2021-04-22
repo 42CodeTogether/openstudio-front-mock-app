@@ -14,7 +14,9 @@ import {
   makeStyles,
   TextField,
 } from "@material-ui/core";
+import { NoEncryption } from "@material-ui/icons";
 import React, { useState } from "react";
+import { useHistory } from "react-router";
 
 const useStyles = makeStyles((theme) => ({
   circle: {
@@ -32,7 +34,18 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "10px",
   },
   listBox: {
-    width: "27%",
+    width: "28%",
+    maxHeight: "10vh",
+  },
+  subjectList: {
+    maxHeight: "70vh",
+    overflowY: "scroll",
+    overflowX: "hidden",
+    msOverflowStyle: "none",
+    scrollbarWidth: "none",
+    "&::-webkit-scrollbar": {
+      display: "none",
+    },
   },
   detailBox: {
     width: "70%",
@@ -65,8 +78,10 @@ const CircleSelector = () => {
 };
 
 const SubjectList = () => {
+  const classes = useStyles();
+
   return (
-    <>
+    <Box className={classes.subjectList}>
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Card elevation={3}>
@@ -104,8 +119,26 @@ const SubjectList = () => {
             </CardActions>
           </Card>
         </Grid>
+        <Grid item xs={12}>
+          <Card elevation={3}>
+            <CardHeader title="SubjectName" />
+            <CardContent>Subject description</CardContent>
+            <CardActions>
+              <Button variant="contained">Go</Button>
+            </CardActions>
+          </Card>
+        </Grid>
+        <Grid item xs={12}>
+          <Card elevation={3}>
+            <CardHeader title="SubjectName" />
+            <CardContent>Subject description</CardContent>
+            <CardActions>
+              <Button variant="contained">Go</Button>
+            </CardActions>
+          </Card>
+        </Grid>
       </Grid>
-    </>
+    </Box>
   );
 };
 
@@ -113,6 +146,7 @@ const SubjectDetail = () => {
   const classes = useStyles();
   const [openRandom, setOpenRandom] = useState(false);
   const [openTeam, setOpenTeam] = useState(false);
+  const history = useHistory();
 
   const handleClickOpenRandom = () => {
     setOpenRandom(true);
@@ -128,6 +162,11 @@ const SubjectDetail = () => {
 
   const handleCloseTeam = () => {
     setOpenTeam(false);
+  };
+
+  const handleClickAcceptRandom = () => {
+    handleCloseRandom();
+    history.push("/time-table");
   };
 
   return (
@@ -147,8 +186,12 @@ const SubjectDetail = () => {
           </CardContent>
         </Box>
         <CardActions>
-          <Button variant="contained" onClick={handleClickOpenRandom}>빠른 시작</Button>
-          <Button variant="contained" onClick={handleClickOpenTeam}>팀원 모집</Button>
+          <Button variant="contained" onClick={handleClickOpenRandom}>
+            빠른 시작
+          </Button>
+          <Button variant="contained" onClick={handleClickOpenTeam}>
+            팀원 모집
+          </Button>
         </CardActions>
       </Card>
       <Dialog
@@ -157,9 +200,7 @@ const SubjectDetail = () => {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">
-          {"랜덤 매칭"}
-        </DialogTitle>
+        <DialogTitle id="alert-dialog-title">{"랜덤 매칭"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
             랜덤 매칭을 신청하시겠습니까?
@@ -167,37 +208,18 @@ const SubjectDetail = () => {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleCloseRandom} color="primary">
-			취소
+            취소
           </Button>
-		  <Button onClick={handleCloseRandom} color="primary" autoFocus>
+          <Button onClick={handleClickAcceptRandom} color="primary" autoFocus>
             신청
           </Button>
         </DialogActions>
       </Dialog>
-	<Dialog
-        open={openRandom}
-        onClose={handleCloseRandom}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
+      <Dialog
+        open={openTeam}
+        onClose={handleCloseTeam}
+        aria-labelledby="form-dialog-title"
       >
-        <DialogTitle id="alert-dialog-title">
-          {"랜덤 매칭"}
-        </DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            랜덤 매칭을 신청하시겠습니까?
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleCloseRandom} color="primary">
-			취소
-          </Button>
-		  <Button onClick={handleCloseRandom} color="primary" autoFocus>
-            신청
-          </Button>
-        </DialogActions>
-      </Dialog>
-	  <Dialog open={openTeam} onClose={handleCloseTeam} aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title">팀원 모집</DialogTitle>
         <DialogContent>
           <DialogContentText>
@@ -210,14 +232,20 @@ const SubjectDetail = () => {
             label="모집 글"
             type="email"
             fullWidth
-			multiline
+            multiline
           />
         </DialogContent>
         <DialogActions>
           <Button onClick={handleCloseTeam} color="primary">
             취소
           </Button>
-          <Button onClick={handleCloseTeam} color="primary">
+          <Button
+            onClick={() => {
+              handleCloseTeam();
+              history.push("/dash-board");
+            }}
+            color="primary"
+          >
             신청
           </Button>
         </DialogActions>
